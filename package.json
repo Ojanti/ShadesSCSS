@@ -1,0 +1,32 @@
+{
+  "name": "ShadesSCSS",
+  "version": "1.0.0",
+  "description": "A light wieght Sass (+ Grunt) based starterkit/boilerplate for front-end designers/developers.",
+  "keywords": [
+    "sass",
+    "starterkit",
+    "boilerplate",
+    "framework",
+    "grunt",
+    "CSS3",
+    "SCSS",
+    "themes",
+    "templating",
+    "ui"
+  ],
+  "author": "John Ojanti Itebu",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "latest",
+    "grunt-postcss": "^0.9.0",
+    "pixrem": "latest",
+    "autoprefixer": "latest"
+  },
+  "dependencies": {
+    "grunt-sass": "^2.0.0",
+    "node-sass": "^4.6.1"
+  }
+}

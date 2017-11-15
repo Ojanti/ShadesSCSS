@@ -1,0 +1,99 @@
+
+///////////////////
+// CONFIGURATION //
+///////////////////
+
+// Theme Specific Variables/Config
+$background: white; 
+$alternate-background: #fafafa;
+
+////////////
+// Colors //
+////////////
+
+$primary-color: #0366EE;
+$secondary-color: #FCB42A; 
+$accent-color: #cdcdcd;
+$alternate-color: #404040;
+$link-color: $primary-color;
+$link-hover-color: darken($link-color, 15%);
+$highlight: #ffeea8;
+$error: #D33C40;
+$bq-border: 16px solid #f0f0f0;
+
+
+////////////////
+// Typography //
+////////////////
+
+// Body font
+$font-color: #404040;
+$font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+
+// Headings
+$heading-font-color: #404040;
+$heading-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+/////////////
+// Borders //
+/////////////
+$border-radius: 4px;
+
+/////////////
+// Buttons //
+/////////////
+
+$button-background: $primary-color;
+$button-background-hover: darken($button-background, 10%);
+$button-color: #ffffff;
+$button-font-weight: 600;
+$button-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+$button-font-size: 1rem;
+$button-border-width: 1px;
+$button-border-style: solid;
+$button-border-color: $button-background;
+$button-border-radius: $border-radius;
+$button-text-transform: none;
+
+// Accent buttons
+$accent-button-background: $secondary-color;
+$accent-button-color: #ffffff;
+$accent-button-color-hover: #ffffff;
+
+// Muted Buttons
+$muted-border: 1px solid $accent-color;
+$muted-border-hover: 1px solid darken($accent-color, 30%);
+$muted-background: transparent;
+$muted-background-hover: transparent;
+$muted-color: darken($accent-color, 50%);
+$muted-color-hover: darken($accent-color, 50%);
+
+// Round Buttons
+$round-buttons: 40px;
+
+
+// Import Global & Shared Theme Variables/Config
+@import "base/global_variables";
+
+@import "base/mixins";
+
+// Reset
+@import "base/normalize";
+@import "base/reset";
+
+// Components
+@import "components/scaffolding";
+@import "components/grid";
+@import "components/helpers";
+@import "components/buttons";
+@import "components/forms";
+@import "components/tables";
+@import "components/navigation";
+@import "components/layout";
+
+
+
+////////////////////////////////////////////
+// ADD YOUR THEME CUSTOM CODE BELOW HERE  //
+////////////////////////////////////////////

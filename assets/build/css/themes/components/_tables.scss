@@ -1,0 +1,126 @@
+/* Tables
+  =============== */
+
+// Table expands to full width of containing element
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	max-width: 100%;
+}
+
+// Extra border underneath header
+thead th {
+	border-bottom: 2px solid $border-color;
+}
+
+// Extra border above footer
+tfoot th {
+	border-top: 2px solid $border-color;
+}
+
+td {
+	border-bottom: 1px solid $border-color;
+}
+
+th,
+td {
+	text-align: left;
+	padding: .5rem;
+}
+
+caption {
+	padding: $padding 0;
+	caption-side: bottom;
+	color: $caption;
+}
+
+.striped-table tbody tr:nth-child(odd) {
+	background-color: $stripes;
+}
+
+// Container for responsive tables
+.contain-table {
+	overflow-x: auto;
+}
+
+@include small-breakpoint {
+	.contain-table {
+		width: 100%;
+	}
+}
+
+
+// Responsive Table
+@media #{$medium-and-down} {
+
+  table.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    position: relative;
+
+    td:empty:before {
+      content: '\00a0';
+    }
+
+    th,
+    td {
+      margin: 0;
+      vertical-align: top;
+    }
+
+    th { text-align: left; }
+    thead {
+      display: block;
+      float: left;
+
+      tr {
+        display: block;
+        padding: 0 10px 0 0;
+
+        th::before {
+          content: "\00a0";
+        }
+      }
+    }
+    tbody {
+      display: block;
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+      white-space: nowrap;
+
+      tr {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+    th {
+      display: block;
+      text-align: right;
+    }
+    td {
+      display: block;
+      min-height: 1.25em;
+      text-align: left;
+    }
+    tr { padding: 0 10px; }
+
+    /* sort out borders */
+    thead {
+      border: 0;
+      border-right: 1px solid $border-color;
+    }
+
+    &.bordered {
+      th { border-bottom: 0; border-left: 0; }
+      td { border-left: 0; border-right: 0; border-bottom: 0; }
+      tr { border: 0; }
+      tbody tr { border-right: 1px solid $border-color; }
+    }
+
+  }
+
+}

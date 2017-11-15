@@ -1,0 +1,112 @@
+
+////////////////
+// Typography //
+////////////////
+
+// Body font
+$font-size: 1rem;
+$body-font-size: 1rem;
+$font-style: normal;
+$font-variant: normal;
+$font-weight: normal;
+$line-height: 1.6;
+
+// Headings
+$heading-font-weight: 600;
+$heading-line-height: 1.2;
+
+// Mobile heading font size
+$h1-mobile: 1.75rem;
+$h2-mobile: 1.5rem;
+$h3-mobile: 1.25rem;
+$h4-mobile: 1.1rem;
+$h5-mobile: 1rem;
+
+// Heading font size
+$h1: 2.25rem;
+$h2: 2rem;
+$h3: 1.75rem;
+$h4: 1.5rem;
+$h5: 1.25rem;
+
+/////////////
+// Padding //
+/////////////
+
+$padding: 1rem;
+$margins: 1.5rem;
+$content-padding: 60px 0;
+$content-padding-mobile: 30px 0;
+
+/////////////
+// Borders //
+/////////////
+
+$border-width: 1px;
+$border-style: solid;
+$border-color: #dedede;
+$borders: $border-width $border-style $border-color;
+
+
+///////////
+// Forms //
+///////////
+
+$forms: ('[type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week], [type=time], select, textarea');
+$buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button]');
+$input-background: transparent;
+$placeholder: darken($accent-color, 20%);
+$form-border: 1px solid #cdcdcd;
+$form-border-hover: 1px solid darken(#cdcdcd, 10%);
+$form-border-focus: 1px solid $link-color;
+
+////////////
+// Tables //
+////////////
+
+$stripes: #f8f8f8;
+$caption: #ababab;
+
+//////////
+// Code //
+//////////
+
+$code-color: $font-color;
+$code-size: 14px;
+$code-family: Menlo, monospace;
+$code-background: transparent;
+$code-borders: $borders;
+
+
+//////////////////////////////////////
+// Media Query Ranges & Breakpoints //
+//////////////////////////////////////
+
+$x-small: 600px !default;
+$small-screen: 600px !default;
+$small: 800px !default;
+$medium-screen: 992px !default;
+$medium: 1000px !default;
+$large: 1200px !default;
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+
+$mobile: $x-small;
+$desktop: $medium;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$extra-large-and-up: "only screen and (min-width : #{$large-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+
+ //////////
+ // Grid //
+ //////////
+$num-cols: 12 !default;
+$gutter-width: 1.5rem !default;
+$element-top-margin: $gutter-width/3 !default;
+$element-bottom-margin: ($gutter-width*2)/3 !default;
