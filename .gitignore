@@ -27,5 +27,5 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 
 
-node_modules/*
 .sass-cache/*
+node_modules/*
