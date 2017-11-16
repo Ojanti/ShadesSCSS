@@ -14,6 +14,10 @@
     "templating",
     "ui"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ojanti/_ShadesSCSS.git"
+  },
   "author": "John Ojanti Itebu",
   "license": "MIT",
   "devDependencies": {
