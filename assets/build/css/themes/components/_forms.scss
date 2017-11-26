@@ -24,7 +24,7 @@
 // Input fields on focus 
 %forms-focus {
 	border: $form-border-focus;
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1), 0 0 6px lighten($link-color, 30%);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 // Variable containing all input fields 
@@ -37,11 +37,24 @@
 	&:active {
 		@extend %forms-focus;
 	}
+
+	&[readonly], &[disabled]{
+		background: rgb(236, 236, 236);
+		border-color: rgb(236, 236, 236);
+		cursor: default;
+
+		&:focus,
+		&:active {
+			border-color: rgb(236, 236, 236);
+		}
+	}
+
 }
 
 textarea {
 	overflow: auto;
 	height: auto;
+	min-height: 150px;
 }
 
 fieldset {
@@ -59,14 +72,7 @@ legend {
 // Fix issues with select
 select {
 	color: $font-color;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAvklEQVQoFY2QMQqEMBBFv7ERa/EMXkGw11K8QbDXzuN4BHv7QO6ifUgj7v4UAdlVM8Uwf+b9YZJISnlqrfEUZVlinucnBGKaJgghbiHOyLyFKIoCbdvecpyReYvo/Ma2bajrGtbaC58kCdZ1RZ7nl/4/4d5EsO/7nzl7IUtodBexMMagaRrs+06JLMvcNWmaOv2W/C/TMAyD58dxROgSmvxFFMdxoOs6lliWBXEcuzokXRbRoJRyvqqqQvye+QDMDz1D6yuj9wAAAABJRU5ErkJggg==) right center no-repeat;
-	line-height: 1; // ensures text doesn't get cut off
-	
-}
-select::-ms-expand{
-	display:none; // dropdown icon fix for IE
+	line-height: 1;
 }
 
 // Make range full width
@@ -80,7 +86,19 @@ label {
 	max-width: 100%;
 	display: block;
 	margin: 1rem 0 .5rem;
+	
+	// Radio & Checkbox label fix
+	&.radio, &.checkbox{
+		font-weight: normal;
+	}
+
+	// Radio label fix
+	&.radio{
+		display: inline-block;
+		margin-right: 10px;
+	}
 }
+
 
 @include small-breakpoint {
 	.split-form {
@@ -98,7 +116,7 @@ input,
 select,
 textarea {
 	&.has-error {
-		border: 1px solid $error;
+		border: 1px solid lighten(desaturate($error, 15%), 15%);
 		box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1), 0 0 6px lighten($error, 35%);
 	}
 	&:hover,

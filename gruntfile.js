@@ -56,6 +56,10 @@ module.exports = function(grunt) {
                     ext: '.min.css'
                 }]
             },
+            vendor: {
+              src:  'assets/build/css/vendor/**/*.css',
+              dest: 'assets/src/css/vendor.min.css'
+            }
         },
 
     });

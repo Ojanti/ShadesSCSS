@@ -8,6 +8,7 @@
 	border: $button-border-width $button-border-style $button-border-color;
 	border-radius: $button-border-radius;
 	background: $button-background;
+	box-shadow: 0 1px 3px rgba(0,0,0,.15);
 	color: $button-color;
 	font-weight: $button-font-weight;
 	font-family: $button-font-family;
@@ -38,6 +39,26 @@
 	text-decoration: none;
 }
 
+// Mixin to alter button design
+@mixin new-button-style ($button-color, $border-color, $background, $states-button-color, $states-border-color, $states-background) {    
+    color: $button-color;
+    border: 1px solid $border-color;
+    background: $background;
+    &:hover,
+    &:focus,
+    &:active {
+    	color:$states-button-color;
+    	border: 1px solid $states-border-color;
+    	background: $states-background;
+    }
+}
+
+// Mixin to alter button size
+@mixin new-button-size ($font-size, $padding) {   
+	font-size: $font-size;
+	padding: $padding;
+}
+
 // Apply styles to .button class, button element, and button-based inputs
 #{$buttons} {
 	@extend %buttons;
@@ -52,11 +73,42 @@
 	&:active {
 		@extend %buttons-focus;
 	}
+	
+
+	//  Buttons sizes
+	&.small{
+		@include new-button-size (.85714286rem,  .5rem 1rem)
+	}
+	&.large{
+		@include new-button-size (1.17rem,  1rem 1.65rem)
+	}
+	&.huge{
+		@include new-button-size (1.7em,  1.3rem 2rem)
+	}
+
+	//  Link button style
+	&.link-button {
+		@include new-button-style ($button-background, transparent, none, darken($button-background, 10%), transparent, none);
+		box-shadow:none !important;
+	}
+
+
+	// Inverted button style	
+	&.inverted{  
+		@include new-button-style ($button-background, $button-background, none, white, $button-background, $button-background);
+		box-shadow:none !important;
+	}
+
+	// Button disabled state
+	&[disabled]{
+		@include _opacity(50);
+		cursor: default;
+	}
 }
 
 // Secondary button color
-.accent-button,
-a.accent-button {
+.secondary-button,
+a.secondary-button {
 	color: $accent-button-color;
 	border: 1px solid $accent-button-background;
 	background: $accent-button-background;
@@ -67,7 +119,19 @@ a.accent-button {
 		border: 1px solid darken($accent-button-background, 10%);
 		background: darken($accent-button-background, 10%);
 	}
+
+	
+	// Secondary Link button style
+	&.link-button {
+		@include new-button-style ($accent-button-background, transparent, none, darken($accent-button-background, 10%), transparent, none);
+	}
+
+	// Inverted button style	
+	&.inverted{  
+		@include new-button-style ($accent-button-background, $accent-button-background, none, white, $accent-button-background, $accent-button-background);
+	}
 }
+
 
 // Muted buttons
 .muted-button,

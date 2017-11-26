@@ -1,4 +1,14 @@
 
+////////////
+// colors //
+////////////
+
+$color-success:         #4caf50;
+$color-info:            #5bc0de;
+$color-warning:         #f0ad4e;
+$color-error:           #e74c3c;
+$white:                 #ffffff;
+
 ////////////////
 // Typography //
 ////////////////
@@ -10,6 +20,8 @@ $font-style: normal;
 $font-variant: normal;
 $font-weight: normal;
 $line-height: 1.6;
+
+$text-gray: #969da6;
 
 // Headings
 $heading-font-weight: 600;
@@ -28,6 +40,18 @@ $h2: 2rem;
 $h3: 1.75rem;
 $h4: 1.5rem;
 $h5: 1.25rem;
+
+// Text color map
+$text-color-map: (
+  "primary":              $primary-color,
+  "secondary":            $secondary-color,
+  "body":                 $font-color,
+  "gray":                 $text-gray,
+  "success":              $color-success,
+  "error":                $color-error,
+  "warning":              $color-warning
+);
+
 
 /////////////
 // Padding //
@@ -57,8 +81,8 @@ $buttons: ('.button, a.button, button, [type=submit], [type=reset], [type=button
 $input-background: transparent;
 $placeholder: darken($accent-color, 20%);
 $form-border: 1px solid #cdcdcd;
-$form-border-hover: 1px solid darken(#cdcdcd, 10%);
-$form-border-focus: 1px solid $link-color;
+$form-border-hover: 1px solid darken(#cdcdcd, 15%);
+$form-border-focus: 1px solid darken(desaturate($link-color, 20%), 5%) ;
 
 ////////////
 // Tables //
@@ -71,7 +95,7 @@ $caption: #ababab;
 // Code //
 //////////
 
-$code-color: $font-color;
+$code-color: #c7254d;
 $code-size: 14px;
 $code-family: Menlo, monospace;
 $code-background: transparent;
@@ -83,12 +107,12 @@ $code-borders: $borders;
 //////////////////////////////////////
 
 $x-small: 600px !default;
-$small-screen: 600px !default;
-$small: 800px !default;
+$small-screen: 768px !default;
+$small: 768px !default;
 $medium-screen: 992px !default;
 $medium: 1000px !default;
 $large: 1200px !default;
-$small-screen-up: 601px !default;
+$small-screen-up: 769px !default;
 $medium-screen-up: 993px !default;
 $large-screen-up: 1201px !default;
 
@@ -106,7 +130,28 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
  //////////
  // Grid //
  //////////
+
 $num-cols: 12 !default;
+$full-gutter-width: 2rem !default;
 $gutter-width: 1.5rem !default;
 $element-top-margin: $gutter-width/3 !default;
 $element-bottom-margin: ($gutter-width*2)/3 !default;
+
+///////////////////
+// Social colors //
+///////////////////
+
+$fb: rgb(59, 89, 182);
+$tw: rgb(64, 153, 255);
+$googleplus: rgb(215, 61, 50);
+$pinterest: rgb(203, 32, 39);
+$skype: rgb(18, 165, 244);
+$spotify: rgb(129, 183, 26);
+$instagram: #4e433c;
+$tumblr: #2b4964;
+$vimeo: #86b32d;
+$soundcloud: #f76600;
+$youtube: #ff3333;
+$linkedin: #4875b4;
+$flickr: #fe0883;
+$foursquare: #8fd400;

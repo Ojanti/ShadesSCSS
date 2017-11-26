@@ -5,6 +5,7 @@
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+  border: 1px solid $border-color;
 	width: 100%;
 	max-width: 100%;
 }
@@ -12,11 +13,13 @@ table {
 // Extra border underneath header
 thead th {
 	border-bottom: 2px solid $border-color;
+  background: rgb(249, 250, 251);
 }
 
 // Extra border above footer
 tfoot th {
 	border-top: 2px solid $border-color;
+  background: rgb(249, 250, 251);
 }
 
 td {
@@ -37,6 +40,11 @@ caption {
 
 .striped-table tbody tr:nth-child(odd) {
 	background-color: $stripes;
+}
+.striped-table{
+  thead th, tfoot th{
+    background:none;
+  }
 }
 
 // Container for responsive tables
@@ -123,4 +131,9 @@ caption {
 
   }
 
+}
+
+
+.responsive-table {
+  overflow-x: auto;
 }

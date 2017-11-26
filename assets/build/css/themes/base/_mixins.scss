@@ -51,3 +51,29 @@
     font-style: $style;
   }
 }
+
+
+// Grid Mixins
+@mixin reset-offset {
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+@mixin grid-classes($size, $i, $perc) {
+  &.offset-#{$size}#{$i} {
+    margin-left: $perc;
+  }
+  &.pull-#{$size}#{$i} {
+    right: $perc;
+  }
+  &.push-#{$size}#{$i} {
+    left: $perc;
+  }
+}
+
+// Opacity
+@mixin _opacity($value){  
+  zoom: 1;
+  filter: alpha(opacity= $value);
+  opacity: ($value/100);
+}

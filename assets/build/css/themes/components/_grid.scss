@@ -1,7 +1,12 @@
 /* Grids
   =============== */
 
-  .full-container {
+.full_block{
+  float:left;
+  width:100%;
+}
+
+.full-container {
   max-width: 100%;
   padding: 0 1rem;
 }
@@ -10,7 +15,10 @@
   max-width: $large;
   width: 90%;
 }
-
+.x-small-container {
+  @extend .container;
+  max-width: $x-small;
+}
 .small-container {
   @extend .container;
   max-width: $small;
@@ -36,6 +44,11 @@
   margin-right: (-1 * $gutter-width / 2);
 }
 
+.full-container .row {
+  margin-left: (-1 * $full-gutter-width / 2);
+  margin-right: (-1 * $full-gutter-width / 2);
+}
+
 .section {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -51,24 +64,6 @@
   }
 }
 
-
-// Mixins to eliminate code repitition
-@mixin reset-offset {
-  margin-left: auto;
-  left: auto;
-  right: auto;
-}
-@mixin grid-classes($size, $i, $perc) {
-  &.offset-#{$size}#{$i} {
-    margin-left: $perc;
-  }
-  &.pull-#{$size}#{$i} {
-    right: $perc;
-  }
-  &.push-#{$size}#{$i} {
-    left: $perc;
-  }
-}
 
 
 .row {
