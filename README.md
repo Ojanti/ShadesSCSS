@@ -1,8 +1,8 @@
-# Shades SCSS 🕶
+# ShadesSCSS 🕶
 
-### Frontend SCSS Boilerplate
+### Frontend Sass Boilerplate
 
-Shades SCSS is a light weight, robust, scalable & highly extensible Sass boilerplate for creating css themes. 
+ShadesSCSS is a light weight, robust, scalable & highly extensible Sass boilerplate for creating css themes. 
 Its very easy to use. All you have to do is set basic values for configuration and compile to create a new theme.
 When used with the configured grunt tasks, you get its full power to;
 - Sass compilation
@@ -12,13 +12,9 @@ When used with the configured grunt tasks, you get its full power to;
 
 Shades SCSS doesnt get in your way. It gives you just enough to get going and leaves the go crazy with your template designs 🕺
 
-## Get Started
-
-Coming Soon.
-
 ## Documentation
 
-Coming Soon.
+[https://ojanti.github.io/ShadesSCSS-Documentation/](https://ojanti.github.io/ShadesSCSS-Documentation/)
 
 ## License
 
