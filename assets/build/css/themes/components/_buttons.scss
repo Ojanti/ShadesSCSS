@@ -37,6 +37,7 @@
 	background: darken($button-background, 10%);
 	color: $button-color;
 	text-decoration: none;
+	outline: none; // Chromium orange/blue outline fix
 }
 
 // Mixin to alter button design

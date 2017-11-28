@@ -2400,6 +2400,7 @@ blockquote {
   background: #169bfe;
   color: #ffffff;
   text-decoration: none;
+  outline: none;
 }
 
 .button::-moz-focus-inner, a.button::-moz-focus-inner, button::-moz-focus-inner, [type=submit]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=button]::-moz-focus-inner {
@@ -2555,6 +2556,7 @@ a.full-button {
   border: 1px solid #1a8ce0;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  outline: none;
 }
 
 [type=color][readonly], [type=color][disabled], [type=date][readonly], [type=date][disabled], [type=datetime][readonly], [type=datetime][disabled], [type=datetime-local][readonly], [type=datetime-local][disabled], [type=email][readonly], [type=email][disabled], [type=month][readonly], [type=month][disabled], [type=number][readonly], [type=number][disabled], [type=password][readonly], [type=password][disabled], [type=search][readonly], [type=search][disabled], [type=tel][readonly], [type=tel][disabled], [type=text][readonly], [type=text][disabled], [type=url][readonly], [type=url][disabled], [type=week][readonly], [type=week][disabled], [type=time][readonly], [type=time][disabled], select[readonly], select[disabled], textarea[readonly], textarea[disabled] {
